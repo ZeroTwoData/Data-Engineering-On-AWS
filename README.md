@@ -1,5 +1,3 @@
-# Data-Engineering-On-AWS
-
 # Data Engineering FAQ's
 
 ## What Is the Purpose of Data Engineering?
