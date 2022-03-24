@@ -41,4 +41,4 @@ NoSQL database planning:
 
 ## Selecting the Tools
 In this section, we will look at the main components of our data pipeline, which model our DS Blueprint listed above.
-<img src="https://user-images.githubusercontent.com/74563990/159933839-8ea40732-0159-4ad2-9823-79d41bd4e289.jpg" width="500"/>
+<img src="https://user-images.githubusercontent.com/74563990/159989202-57605a99-9fe8-4e85-9958-135a6cd5604d.jpg" width="500"/>
