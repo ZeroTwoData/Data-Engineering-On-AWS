@@ -10,8 +10,8 @@ Data Engineering is the process of making data usable for the business, by makin
 ## How Does The DS Blueprint Work
 
 A DS Blueprint will always consist of five phases: 
-* Connect: Usually business have already developed SQL DB's, Datawarehouses or API's that hold the data, so data engineers can connect 
-* Buffer:
+* Connect: Usually business have already developed SQL DB's, Datawarehouses, Web Apps, or API's that hold the data, so data engineers can easily connect to these                sources to ingest it for their pipelines 
+* Buffer: 
 * Process:
 * Store:
 * Visualize:
@@ -29,7 +29,11 @@ Kaggle: https://www.kaggle.com/carrie1/ecommerce-data
 Before building a pipeline it is essential to understand what the business requires it for. Will the visualized date be used for business goals or business intelligence goals. Business goals can include processsing transactions from various stores in a single location or give customers access to his/her purchase history. Business intelligence goals can include obtaining data such as average sales, most sold products, and most valuable products per hour/day/month/year. Understanding what results you want you from the data is key to developing the optimal data pipeline.
 
 ## Storage Possibilities
-The data can either be stored in a relational SQL database or a No-SQL database. If we wanted to create relationships between the columns of data then this is how I would 
+The data can either be stored in a relational database or a NoSQL database. If we wanted to create relationships between the columns of data and that data is already strucutred, then it would make sense to use a relational database. Although if there are plans to scale (adding hundreds or thousands of columns to the dataset), then it would make more sense to develop a NoSQL database, so as to avoid the relational database from becoming too complex to understand. Although it would be optimal to design a relational database for this particular dataset, I plan to develop a NoSQL database for my dataset. Creating a NoSQL database will prepare myself for having to develop databases at scale in the future.
+
+If I were to use a relational database this is how it would begin to look:
+
+NoSQL database planning:
 
 <br />
 
