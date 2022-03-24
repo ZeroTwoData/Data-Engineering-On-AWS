@@ -58,5 +58,13 @@ Usually this doesn't need to be created because there would a system or device t
 
 <br />
 
-# Data Pipeline
+# Data Pipelines
+
+## Data Ingestion Pipeline
+
+## Stream To Raw Storage Pipeline
+
+## Stream To DynamoDB Pipeline
+
+## Visualization API Pipeline
 
