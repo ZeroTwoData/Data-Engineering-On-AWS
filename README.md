@@ -16,7 +16,7 @@ A DS Blueprint will always consist of five phases:
 * Store:
 * Visualize:
 
-
+<br />
 
 # Before Building The Pipeline
 
@@ -29,9 +29,9 @@ Kaggle: https://www.kaggle.com/carrie1/ecommerce-data
 Before building a pipeline it is essential to understand what the business requires it for. Will the visualized date be used for business goals or business intelligence goals. Business goals can include processsing transactions from various stores in a single location or give customers access to his/her purchase history. Business intelligence goals can include obtaining data such as average sales, most sold products, and most valuable products per hour/day/month/year. Understanding what results you want you from the data is key to developing the optimal data pipeline.
 
 ## Storage Possibilities
-The data can either be stored in a relational SQL database or a No-SQL database.
+The data can either be stored in a relational SQL database or a No-SQL database. If we wanted to create relationships between the columns of data then this is how I would 
 
-
+<br />
 
 # Platform Design
 
