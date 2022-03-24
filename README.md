@@ -15,4 +15,4 @@ Data Engineering is the process of making data usable for the business & accessi
 
 ## Components
 In this section, we will look at the main components of our data pipeline.
-<img src="https://user-images.githubusercontent.com/74563990/159933839-8ea40732-0159-4ad2-9823-79d41bd4e289.jpg"/>
+<img src="https://user-images.githubusercontent.com/74563990/159933839-8ea40732-0159-4ad2-9823-79d41bd4e289.jpg" width="500"/>
