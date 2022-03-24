@@ -17,12 +17,23 @@ A DS Blueprint will always consist of five phases:
 * Visualize:
 
 
+
 # Before Building The Pipeline
 
 ## Selecting the Dataset
-For this project I decided to select a dataset that would closely replicate data that I would work with at an actual company. Since this is my first project, I wanted to make sure to select a dataset that wasn't to small or to large to handle. So after some browsing on Kaggle, I decided to select a e-commerce dataset that was 43MB in size. Some key factors that this dataset included were descriptive column names (which are much easier to work with), customer id's, invoice number's, invoice date's, unit price, and product quantity.
+For this project I decided to select a dataset that would closely replicate data that I would work with at an actual company. Since this is my first project, I wanted to make sure to select a csv dataset (to reduce the number of columns that I had to work with) that wasn't too small or too large to handle. So after some browsing on Kaggle, I decided to select a e-commerce dataset that was 43MB in size. Some key factors that this dataset included were descriptive column names (which are much easier to work with if you are using a relational SQL database), customer id's, invoice number's, invoice date's, unit price, and product quantity.
 
 Kaggle: https://www.kaggle.com/carrie1/ecommerce-data
+
+## Defining Purpose of the Dataset
+Before building a pipeline it is essential to understand what the business requires it for. Will the visualized date be used for business goals or business intelligence goals. Business goals can include processsing transactions from various stores in a single location or give customers access to his/her purchase history. Business intelligence goals can include obtaining data such as average sales, most sold products, and most valuable products per hour/day/month/year. Understanding what results you want you from the data is key to developing the optimal data pipeline.
+
+## Storage Possibilities
+The data can either be stored in a relational SQL database or a No-SQL database.
+
+
+
+# Platform Design
 
 ## Selecting the Tools
 In this section, we will look at the main components of our data pipeline, which model our DS Blueprint listed above.
