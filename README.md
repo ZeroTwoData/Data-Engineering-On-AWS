@@ -61,6 +61,10 @@ There are two ways of processing data. Stream processing or Batch processing.
 
 Stream processing is a continuous process that begins with a <b>source</b> that is sending data into <b>processing</b>, in which then it is processed, and sent to it's <b>destination</b>. In my case the source would begin with Kinesis, that is sending data into the processing (Lambda function) and sends it into it's destination.
 
+<img src="https://user-images.githubusercontent.com/74563990/160053624-b35b734d-9c72-40bb-9609-156f9f1a7a43.png" width="600"/>
+
+<img src="https://user-images.githubusercontent.com/74563990/160053663-e6eb5068-9b4a-405d-80c3-721763821f06.png" width="600"/>
+
 Batch processing begins with the <b>scheduler</b> that activates the <b>processing</b>, which then connects to the data <b>source</b>, and ultimately writes it to it's <b>destination</b>. In my case the source would begin with a scheduler tool such as "CloudWatch" or "Airflow" that activates the processing (Lambda function), which then connects to the data source Kinesis and ultimately writes it to it's destination.  
 
 ## Store
