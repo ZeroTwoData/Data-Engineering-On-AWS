@@ -44,15 +44,23 @@ In this section, we will look at the main components of our data pipeline, which
 <img src="https://user-images.githubusercontent.com/74563990/159989202-57605a99-9fe8-4e85-9958-135a6cd5604d.jpg" width="300"/>
 
 ## Client
-Usually this doesn't need to be created because there would a system or device that is going to send data to my API at a business. But in my case, since there isn't a device that can accomplish that task, I have created a Python Client that takes the csv and it selects either on a row basis or on a basis of number of lines or date, which data is going to be sent to my system. The Python Client transforms each of my lines into a JSON string.
+Usually this doesn't need to be created because there would a system or device (a.k.a the client) that is going to send data to my API at a company. But in my case, since there isn't a device that can accomplish that task, I have created a Python Client that takes the csv and it selects data either on a row basis, basis of number of lines, or date that is going to be sent to my API. The Python Client will also transform each of my lines into a JSON string, becuase JSON is more of an organized format to analyze the data.
 
 ## Connect
+My client is sending data to the API Gateway that is hosting a URL. Once the data is sent there, living in the background is a Lambda function that is getting triggered by the API Gateway and is processing the JSON that we have. Ultimately the Lambda function will send it into some system, such as a database or database buffer. In my case the data will be sent to a database buffer.
 
 ## Buffer
+Kinesis, also known as a message queue (consist of two parts: a producer which sends data into the message queue and a consumer which takes data out of the message queue). In my case the producer is the Lambda function that sits behind the API Gateway becuase it is ultimately "producing" (or sending) my processed (from csv format to json format) data into the message queue. On the consumer end can be either another Lambda function or a tool such as Kinesis firehouse which takes the data back out.
 
 ## Process
+There are two ways of processing data. Stream processing or Batch processing.
+
+Stream processing is a continuous process that begins with a <b>source</b> that is sending data into <b>processing</b>, in which then it is processed, and sent to it's <b>destination</b>. In my case the source would begin with Kinesis, that is sending data into the processing (Lambda function) and sends it into it's destination.
+
+Batch processing begins with the <b>scheduler</b> that activates the <b>processing</b>, which then connects to the data <b>source</b> and writes it to it's <b>destination</b>. In my case the source would begin with the a scheduler tool such as "CloudWatch" or "Airflow" that activates the processing (Lambda function), which then connects to the data source Kinesis and writes it to it's destination.  
 
 ## Store
+
 
 ## Visualize
 
