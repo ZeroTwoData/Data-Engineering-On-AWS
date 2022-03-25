@@ -2,7 +2,7 @@
 
 ## What Is the Purpose of Data Engineering?
 
-Data Engineering is the process of making data usable for the business, by making it accessible for data customers (BI Analysts, Data Analysts, Data Scientists, etc.) who will ultimately analyze this data for business needs. Data customers are only able to access & analyze data, after a data engineer has built a system in which they can retrieve the data from. These systems, specifically referred to as "data pipelines," are an end-to-end process that ingest raw/organized data, process it, prepare it, store it, and finally visualize the data for the customers to use). I found that the best way to begin designing any pipeline, is to begin by creating a blueprint. Below is a guide for which any data pipeline can be built upon.
+Data Engineering is the process of making data usable for the business, by making it accessible for data customers (BI Analysts, Data Analysts, Data Scientists, etc.) who will ultimately analyze this data for business needs. Data customers are only able to access & analyze data, after a data engineer has built a system in which they can retrieve the data from. These systems, specifically referred to as "data pipelines," are an end-to-end process that ingest raw/organized data, process it, prepare it, store it, and finally visualize the data for the customers to use). I found that the best way to begin designing pipelines, are to begin by creating a blueprint. Below is a guide for which any data pipelines can be built upon.
 
 ![DS Blueprint](https://user-images.githubusercontent.com/74563990/159792405-7195ed58-7244-44a3-8b55-9719ba720d25.jpg)
 
@@ -44,7 +44,7 @@ In this section, we will look at the main components of our data pipeline, which
 <img src="https://user-images.githubusercontent.com/74563990/159989202-57605a99-9fe8-4e85-9958-135a6cd5604d.jpg" width="300"/>
 
 ## Client
-Usually this doesn't need to be created because there would a system or device (a.k.a the client) that is going to send data to the API at a company. But in my case, since there isn't a device that can accomplish that task, I have created a Python Client that takes the csv and it selects data either on a row basis, basis of number of lines, or date that is going to be sent to my API. The Python Client will also transform each of my lines into a JSON string, becuase JSON is more of an organized format to analyze the data.
+Usually this doesn't need to be created because there would a system or device (a.k.a the client) that is going to send data to the API at a company. But in my case, since there isn't a device that can accomplish that task, I have created a Python Client that takes the csv and it selects data either on a row basis, basis of number of lines, or date that is going to be sent to my API. The Python Client will also transform each of my rows into a JSON string, becuase JSON is more of an organized format to analyze the data.
 
 ## Connect
 My client is sending data to the API Gateway that is hosting a URL. Once the data is sent there, living in the background is a Lambda function that is getting triggered by the API Gateway and is processing the JSON that we have. Ultimately the Lambda function will send it into some system, such as a database or database buffer. In my case the data will be sent to a database buffer first.
