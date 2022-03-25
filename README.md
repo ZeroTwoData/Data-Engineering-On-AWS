@@ -25,7 +25,7 @@ For this project I decided to select a dataset that would closely replicate data
 
 Kaggle: https://www.kaggle.com/carrie1/ecommerce-data
 
-## Defining Purpose of the Dataset
+## Defining the Purpose of the Dataset
 Before building a pipeline it is essential to understand what the business requires it for. Will the visualized date be used for business goals or business intelligence goals. Business goals can include processsing transactions from various stores in a single location or give customers access to his/her purchase history. Business intelligence goals can include obtaining data such as average sales, most sold products, and most valuable products per hour/day/month/year. Understanding what results you want you from the data is key to developing the optimal data pipeline.
 
 ## Storage Possibilities
