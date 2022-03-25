@@ -41,10 +41,10 @@ NoSQL database planning:
 
 ## Selecting the Tools
 In this section, we will look at the main components of our data pipeline, which model our DS Blueprint listed above.
-<img src="https://user-images.githubusercontent.com/74563990/159989202-57605a99-9fe8-4e85-9958-135a6cd5604d.jpg" width="500"/>
+<img src="https://user-images.githubusercontent.com/74563990/159989202-57605a99-9fe8-4e85-9958-135a6cd5604d.jpg" width="300"/>
 
 ## Client
-Usually this doesn't need to be created because there would a system or device that is going to send data to my API at a business. But in my case, since there isn't a device that can accomplish that task, I have created a Python Client that takes the csv and it selects either on a row basis or on a basis of number of lines or date, which data is going to be sent to my system. The Python Client transforms my each line into a JSON string
+Usually this doesn't need to be created because there would a system or device that is going to send data to my API at a business. But in my case, since there isn't a device that can accomplish that task, I have created a Python Client that takes the csv and it selects either on a row basis or on a basis of number of lines or date, which data is going to be sent to my system. The Python Client transforms each of my lines into a JSON string.
 
 ## Connect
 
