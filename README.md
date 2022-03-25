@@ -18,7 +18,7 @@ A DS Blueprint will always consist of five phases:
 
 <br />
 
-# Before Building The Pipeline
+# The Dataset
 
 ## Selecting the Dataset
 For this project I decided to select a dataset that would closely replicate data that I would work with at an actual company. Since this is my first project, I wanted to make sure to select a csv dataset (to reduce the number of columns that I had to work with) that wasn't too small or too large to handle. So after some browsing on Kaggle, I decided to select a e-commerce dataset that was 43MB in size. Some key factors that this dataset included were descriptive column names (which are much easier to work with if you are using a relational SQL database), customer id's, invoice number's, invoice date's, unit price, and product quantity.
