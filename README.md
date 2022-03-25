@@ -44,7 +44,7 @@ In this section, we will look at the main components of our data pipeline, which
 <img src="https://user-images.githubusercontent.com/74563990/159989202-57605a99-9fe8-4e85-9958-135a6cd5604d.jpg" width="300"/>
 
 ## Client
-Usually this doesn't need to be created because there would a system or device (a.k.a the client) that is going to send data to my API at a company. But in my case, since there isn't a device that can accomplish that task, I have created a Python Client that takes the csv and it selects data either on a row basis, basis of number of lines, or date that is going to be sent to my API. The Python Client will also transform each of my lines into a JSON string, becuase JSON is more of an organized format to analyze the data.
+Usually this doesn't need to be created because there would a system or device (a.k.a the client) that is going to send data to the API at a company. But in my case, since there isn't a device that can accomplish that task, I have created a Python Client that takes the csv and it selects data either on a row basis, basis of number of lines, or date that is going to be sent to my API. The Python Client will also transform each of my lines into a JSON string, becuase JSON is more of an organized format to analyze the data.
 
 ## Connect
 My client is sending data to the API Gateway that is hosting a URL. Once the data is sent there, living in the background is a Lambda function that is getting triggered by the API Gateway and is processing the JSON that we have. Ultimately the Lambda function will send it into some system, such as a database or database buffer. In my case the data will be sent to a database buffer.
@@ -57,12 +57,13 @@ There are two ways of processing data. Stream processing or Batch processing.
 
 Stream processing is a continuous process that begins with a <b>source</b> that is sending data into <b>processing</b>, in which then it is processed, and sent to it's <b>destination</b>. In my case the source would begin with Kinesis, that is sending data into the processing (Lambda function) and sends it into it's destination.
 
-Batch processing begins with the <b>scheduler</b> that activates the <b>processing</b>, which then connects to the data <b>source</b> and writes it to it's <b>destination</b>. In my case the source would begin with the a scheduler tool such as "CloudWatch" or "Airflow" that activates the processing (Lambda function), which then connects to the data source Kinesis and writes it to it's destination.  
+Batch processing begins with the <b>scheduler</b> that activates the <b>processing</b>, which then connects to the data <b>source</b>, and ultimately writes it to it's <b>destination</b>. In my case the source would begin with a scheduler tool such as "CloudWatch" or "Airflow" that activates the processing (Lambda function), which then connects to the data source Kinesis and ultimately writes it to it's destination.  
 
 ## Store
-
+For my file storage I'm going to use AWS S3 becuase it is widely used and simple to understand. For my NoSQL database, which is going to store my transactions, I'm going to use DynamoDB. For my analytical layer, I will be using the datawarehouse AWS Redshift, because it is also popular and simple to understand.
 
 ## Visualize
+For visualization purposes I will be using the business intelligence tool Tableau becuase it is popular and easily connects to AWS Redshift. 
 
 <br />
 
