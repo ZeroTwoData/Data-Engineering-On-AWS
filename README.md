@@ -78,7 +78,9 @@ For visualization purposes I will be using the business intelligence tool Tablea
 # Data Pipelines
 
 ## Data Ingestion Pipeline
+Our Python Client is going to send csv rows as JSON into the API Gateway. The Lamda function will process the JSON file and send it into Kinesis.
 
+<img src="https://user-images.githubusercontent.com/74563990/160485088-a7aeaa81-5bf1-4806-918d-e049332e72dd.png" width="600"/>
 
 ## Stream To Raw Storage Pipeline
 
