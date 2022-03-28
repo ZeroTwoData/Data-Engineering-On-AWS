@@ -68,7 +68,7 @@ Batch processing begins with the <b>scheduler</b> that activates the <b>processi
 <img src="https://user-images.githubusercontent.com/74563990/160053663-e6eb5068-9b4a-405d-80c3-721763821f06.png" width="600"/>
 
 ## Store
-For my file storage I'm going to use AWS S3 becuase it is widely used and simple to understand. For my NoSQL database, which is going to store my transactions, I'm going to use DynamoDB. For my analytical layer, I will be using the datawarehouse AWS Redshift, because it is also popular and simple to understand.
+For my file storage I'm going to use AWS S3 becuase it is widely used and simple to understand. For my NoSQL database, which is going to store my transactions, I'm going to use DynamoDB. For my analytical layer, I will be using the datawarehouse AWS Redshift, because it allows for distributed storage (which is great for data that scales).
 
 ## Visualize
 For visualization purposes I will be using the business intelligence tool Tableau becuase it is popular and easily connects to AWS Redshift. 
@@ -89,7 +89,16 @@ Data that is lying in the Kinesis stream will trigger another Lambda function, w
 <img src="https://user-images.githubusercontent.com/74563990/160485547-57b446d5-4fa6-4998-aca9-b06d5b88a6c1.png" width="600"/>
 
 ## Stream To DynamoDB Pipeline
-Now 
+Kinesis insert triggers the Lambda function for DynamoDB. The Lambda is responsible for reformatting/preprocessing the data, writing the customer data (customer + invoices), and writing invoice data (invoice + stockcode)
+
+<img src="https://user-images.githubusercontent.com/74563990/160489461-4ade4019-f8ad-4f7a-9e9a-d379904cf733.png" width="600"/>
 
 ## Visualization API Pipeline
+Created an API as the client's UI. It is responsible for querying Items from an Invoice. Since the data rests in the DynamoDB table "Invoices," the client can request Items for the "InvoiceNo (request parameter)." Lambda triggered by the API queries Dynamo with InvoiceNo
 
+<img src="https://user-images.githubusercontent.com/74563990/160490552-15de3b59-5474-4588-bfac-9305cfb8a9c3.png" width="600"/>
+
+## Visualization Datawarehouse Pipeline
+Kinesis Firehose Delivery Stream connects to the Kinesis Data Stream. Once connected, Kinesis Firehose stores data into an S3 Bucket for intermediate storage. Firehose then copies data from the Bucket into the Redshift Table. Once in Redshift, Tableau can connect and be open for analyst to use.
+
+<img src="https://user-images.githubusercontent.com/74563990/160491466-bf878116-48c1-4616-a622-54b651b7f0be.png" width="600"/>
