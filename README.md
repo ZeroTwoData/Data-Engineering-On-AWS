@@ -52,7 +52,7 @@ My client is sending data to the API Gateway that is hosting a URL. Once the dat
 <img src="https://user-images.githubusercontent.com/74563990/160052778-18b56aac-705b-4b5d-86b2-aea2b9f40389.png" width="600"/>
 
 ## Buffer
-Kinesis, also known as a message queue (consist of two parts: a producer which sends data into the message queue and a consumer which takes data out of the message queue). In my case the producer is the Lambda function that sits behind the API Gateway becuase it is ultimately "producing" (or sending) my processed (from csv format to json format) data into the message queue. On the consumer end can be either another Lambda function or a tool such as Kinesis firehouse which takes the data back out.
+Kinesis, also known as a message queue (consist of two parts: a producer which sends data into the message queue and a consumer which takes data out of the message queue). In my case the producer is the Lambda function that sits behind the API Gateway becuase it is ultimately "producing" (or sending) my processed (from csv format to json format) data into the message queue. On the consumer end can be either another Lambda function or a tool such as Kinesis firehose which takes the data back out.
 
 <img src="https://user-images.githubusercontent.com/74563990/160053165-b92a0869-5ad5-48ae-bd11-67449cecdbd3.png" width="600"/>
 
@@ -102,3 +102,10 @@ Created an API as the client's UI. It is responsible for querying Items from an 
 Kinesis Firehose Delivery Stream connects to the Kinesis Data Stream. Once connected, Kinesis Firehose stores data into an S3 Bucket for intermediate storage. Firehose then copies data from the Bucket into the Redshift Table. Once in Redshift, Tableau can connect and be open for analyst to use.
 
 <img src="https://user-images.githubusercontent.com/74563990/160491466-bf878116-48c1-4616-a622-54b651b7f0be.png" width="600"/>
+
+## Batch Processing Pipeline
+A bulk of files will be stored in S3 and a Lambda function will take the data and move it into the DynamoDB tables or the Redshift table. Before all this can happen, Cloudwatch (a scheduler) will trigger the process.
+
+<img src="https://user-images.githubusercontent.com/74563990/160494091-ac1fa5d1-2c85-4fae-9b5e-365fb7543903.png" width="600"/>
+
+
