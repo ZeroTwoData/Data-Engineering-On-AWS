@@ -83,6 +83,9 @@ Our Python Client is going to send csv rows as JSON into the API Gateway. The La
 <img src="https://user-images.githubusercontent.com/74563990/160485088-a7aeaa81-5bf1-4806-918d-e049332e72dd.png" width="600"/>
 
 ## Stream To Raw Storage Pipeline
+Data that is lying in the Kinesis stream will trigger a Lamda function, which takes the data and places it into a S3 bucket
+
+<img src="https://user-images.githubusercontent.com/74563990/160485547-57b446d5-4fa6-4998-aca9-b06d5b88a6c1.png" width="600"/>
 
 ## Stream To DynamoDB Pipeline
 
