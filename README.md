@@ -78,16 +78,18 @@ For visualization purposes I will be using the business intelligence tool Tablea
 # Data Pipelines
 
 ## Data Ingestion Pipeline
-Our Python Client is going to send csv rows as JSON into the API Gateway. The Lamda function will process the JSON file and send it into Kinesis.
+The Python Client is going to send csv rows as JSON into the API Gateway. The Lamda function will process the JSON file and send it into Kinesis.
 
 <img src="https://user-images.githubusercontent.com/74563990/160485088-a7aeaa81-5bf1-4806-918d-e049332e72dd.png" width="600"/>
 
 ## Stream To Raw Storage Pipeline
-Data that is lying in the Kinesis stream will trigger a Lamda function, which takes the data and places it into a S3 bucket
+Data that is lying in the Kinesis stream will trigger another Lambda function, which takes the data and dumps it into a S3 bucket. 
+*To prevent a lot of files from being dumped into the S3 bucket at one time, I configured the Lambda function to wait for a specified amount of time after each transaction. 
 
 <img src="https://user-images.githubusercontent.com/74563990/160485547-57b446d5-4fa6-4998-aca9-b06d5b88a6c1.png" width="600"/>
 
 ## Stream To DynamoDB Pipeline
+Now 
 
 ## Visualization API Pipeline
 
