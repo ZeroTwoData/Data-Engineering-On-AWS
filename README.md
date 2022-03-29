@@ -20,7 +20,7 @@ A DS Blueprint will always consist of five phases:
 * Processing:
 * Store:
 * Visualize:
-<br />
+
 
 # Contents
 
