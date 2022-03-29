@@ -109,3 +109,12 @@ A bulk of files will be stored in S3 and a Lambda function will take the data an
 <img src="https://user-images.githubusercontent.com/74563990/160494091-ac1fa5d1-2c85-4fae-9b5e-365fb7543903.png" width="600"/>
 
 
+# Building
+
+## Creating Lambda Functions
+I created 3 Lamda functions using AWS Lamda. Those three are:
+* Write-To-Kinesis
+* Write-To-S3
+* Write-To-DynamoDB
+
+## Creating API Gateway
