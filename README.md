@@ -41,7 +41,6 @@ A DS Blueprint will always consist of five phases:
 - [Demo](#demo)
 - [Conclusion](#conclusion)
 - [Follow Me On](#follow-me-on)
-- [Appendix](#appendix)
 
 
 # The Dataset
