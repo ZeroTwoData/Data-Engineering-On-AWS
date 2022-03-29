@@ -25,7 +25,7 @@ A DS Blueprint will always consist of five phases:
 
 # Contents
 
-- [The Data Set](#the-data-set)
+- [The Dataset](#the-data-set)
 - [Platform Design](#platform-design)
   - [Connect](#connect)
   - [Buffer](#buffer)
@@ -33,11 +33,12 @@ A DS Blueprint will always consist of five phases:
   - [Storage](#storage)
   - [Visualization](#visualization)
 - [Data Pipelines](#data-pipelines)
-  - [Stream Processing](#stream-processing)
-    - [Storing Data Stream](#storing-data-stream)
-    - [Processing Data Stream](#processing-data-stream)
-  - [Batch Processing](#batch-processing)
-  - [Visualizations](#visualizations)
+  - [Data Ingestion Pipeline](#data-ingestion-pipeline)
+  - [Stream To Raw Storage Pipeline](#stream-to-raw-storage-pipeline)
+  - [Stream To DynamoDB Pipeline](#stream-to-dynamodb-pipeline)
+  - [Visualization API Pipeline](#visualization-API-pipeline)
+  - [Visualization Warehouse Pipeline](#visualization-warehouse-pipeline)
+  - [Batch Processing Pipeline](#batch-processing-pipeline)
 - [Demo](#demo)
 - [Conclusion](#conclusion)
 - [Follow Me On](#follow-me-on)
