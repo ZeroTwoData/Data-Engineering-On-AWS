@@ -1,6 +1,9 @@
 # E-Commerce Data Engineering Project Via AWS
 
 # Introduction
+This project was a means to test my data engineering knowledge through the planning & construction of data pipelines, using one the most popular webservices known as "AWS." If you have no clue of what I'm talking about 😂, then your in luck! This Github repo was specifically designed to explain exactly what data engineering is and it's purpose in the real world to those with little to no technical knowledge.😉
+
+## Who Are Data Engineers?
 
 ## What Is the Purpose of Data Engineering?
 
@@ -12,13 +15,34 @@ Data Engineering is the process of making data usable for the business, by makin
 ## How Does The DS Blueprint Work
 
 A DS Blueprint will always consist of five phases: 
-* Connect: SQL DB's, Datawarehouses, Web Apps, or API's that hold the data, so data engineers can easily connect to these                sources to ingest it for their   pipelines 
+* Connect: SQL DB's, Datawarehouses, Web Apps, or API's that hold the data, so data engineers can easily connect to these sources to ingest it for their pipelines 
 * Buffer: 
-* Process:
+* Processing:
 * Store:
 * Visualize:
 
 <br />
+
+# Contents
+
+- [The Data Set](#the-data-set)
+- [Platform Design](#platform-design)
+  - [Connect](#connect)
+  - [Buffer](#buffer)
+  - [Processing](#processing)
+  - [Storage](#storage)
+  - [Visualization](#visualization)
+- [Data Pipelines](#data-pipelines)
+  - [Stream Processing](#stream-processing)
+    - [Storing Data Stream](#storing-data-stream)
+    - [Processing Data Stream](#processing-data-stream)
+  - [Batch Processing](#batch-processing)
+  - [Visualizations](#visualizations)
+- [Demo](#demo)
+- [Conclusion](#conclusion)
+- [Follow Me On](#follow-me-on)
+- [Appendix](#appendix)
+
 
 # The Dataset
 
@@ -58,7 +82,7 @@ Kinesis, also known as a message queue (consist of two parts: a producer which s
 
 <img src="https://user-images.githubusercontent.com/74563990/160053165-b92a0869-5ad5-48ae-bd11-67449cecdbd3.png" width="600"/>
 
-## Process
+## Processing
 There are two ways of processing data. Stream processing or Batch processing.
 
 Stream processing is a continuous process that begins with a <b>source</b> that is sending data into <b>processing</b>, in which then it is processed, and sent to it's <b>destination</b>. In my case the source would begin with Kinesis, that is sending data into the processing (Lambda function) and sends it into it's destination.
