@@ -10,7 +10,7 @@ Data Engineering is the process of making data usable for the business, by makin
 ## How Does The DS Blueprint Work
 
 A DS Blueprint will always consist of five phases: 
-* Connect: Usually business have already developed SQL DB's, Datawarehouses, Web Apps, or API's that hold the data, so data engineers can easily connect to these                sources to ingest it for their pipelines 
+* Connect: SQL DB's, Datawarehouses, Web Apps, or API's that hold the data, so data engineers can easily connect to these                sources to ingest it for their   pipelines 
 * Buffer: 
 * Process:
 * Store:
