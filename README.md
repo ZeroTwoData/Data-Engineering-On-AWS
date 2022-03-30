@@ -140,6 +140,6 @@ I created 3 Lamda functions using AWS Lamda. Those three are:
 * Write-To-S3
 * Write-To-DynamoDB
 
-<img src="https://user-images.githubusercontent.com/74563990/160945789-65f05ec6-1de6-408a-a416-9677a6fb6765.png" width="600"/>
+<img src="https://user-images.githubusercontent.com/74563990/160945962-bae5882c-b1af-4c8a-8f46-47a4652fb766.png" width="600"/>
 
 ## Creating API Gateway
