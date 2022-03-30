@@ -67,7 +67,7 @@ In this section, we will look at the main components of our data pipeline, which
 <img src="https://user-images.githubusercontent.com/74563990/159989202-57605a99-9fe8-4e85-9958-135a6cd5604d.jpg" width="300"/>
 
 ## Client
-Usually this doesn't need to be created because there would a system or device (a.k.a the client) that is going to send data to the API at a company. But in my case, since there isn't a device that can accomplish that task, I have created a Python Client that takes the csv and it selects data either on a row basis, basis of number of lines, or date that is going to be sent to my API. The Python Client will also transform each of my rows into a JSON string, becuase JSON is more of an organized format to analyze the data.
+Usually this doesn't need to be created because there would a system or device (a.k.a the client) that is going to send data to the API at a company. But in my case, since there isn't a device that can accomplish that task, I have created a Python Client using AWS SDK (a.k.a Boto3) that takes the csv and it selects data either on a row basis, basis of number of lines, or date that is going to be sent to my API. The Python Client will also transform each of my rows into a JSON string before sending, becuase JSON is more of an organized format to analyze the data.
 
 ## Connect
 My client is sending data to the API Gateway that is hosting a URL. Once the data is sent there, living in the background is a Lambda function that is getting triggered by the API Gateway and is processing the JSON that we have. Ultimately the Lambda function will send it into some system, such as a database or database buffer. In my case the data will be sent to a database buffer first.
@@ -75,7 +75,7 @@ My client is sending data to the API Gateway that is hosting a URL. Once the dat
 <img src="https://user-images.githubusercontent.com/74563990/160052778-18b56aac-705b-4b5d-86b2-aea2b9f40389.png" width="600"/>
 
 ## Buffer
-Kinesis, also known as a message queue (consist of two parts: a producer which sends data into the message queue and a consumer which takes data out of the message queue). In my case the producer is the Lambda function that sits behind the API Gateway becuase it is ultimately "producing" (or sending) my processed (from csv format to json format) data into the message queue. On the consumer end can be either another Lambda function or a tool such as Kinesis firehose which takes the data back out.
+Kinesis, also known as a message queue (consist of two parts: a producer which sends data into the message queue and a consumer which takes data out of the message queue). In my case the producer is the Lambda function that sits behind the API Gateway becuase it is ultimately "producing" (or sending) my processed data into the message queue. On the consumer end can be either another Lambda function or a tool such as Kinesis firehose which takes the data back out.
 
 <img src="https://user-images.githubusercontent.com/74563990/160053165-b92a0869-5ad5-48ae-bd11-67449cecdbd3.png" width="600"/>
 
@@ -139,5 +139,7 @@ I created 3 Lamda functions using AWS Lamda. Those three are:
 * Write-To-Kinesis
 * Write-To-S3
 * Write-To-DynamoDB
+
+<img src="https://user-images.githubusercontent.com/74563990/160945789-65f05ec6-1de6-408a-a416-9677a6fb6765.png" width="600"/>
 
 ## Creating API Gateway
