@@ -157,4 +157,4 @@ Created an API named "E-commerce", created a resource (consists of a url, an HTT
 ## Setting Up Kinesis
 Created a Kinesis Stream to take in my data
 
-<img src="https://user-images.githubusercontent.com/74563990/161112549-07254b3a-4a45-4046-82dd-5c6409c992dc.png" width="600"/>
+<img src="https://user-images.githubusercontent.com/74563990/161132891-1a48292a-4420-4e07-a606-07077a074827.png" width="600"/>
