@@ -159,6 +159,10 @@ Created an API named "E-commerce", created a resource (consists of a url, an HTT
 
 <img src="https://user-images.githubusercontent.com/74563990/161112549-07254b3a-4a45-4046-82dd-5c6409c992dc.png" width="600"/>
 
+Set Mapping (API Gateway uses mapping templates to transform requests before they are sent)
+
+<img src="https://user-images.githubusercontent.com/74563990/161141341-00eccce9-4f41-4d45-bafd-8f0dd27a36ec.png" width="600"/>
+
 ## Lamda Code
 Developed Code for the Lambda Function where I create the Boto3 client and use an if/elif/else decision structure to decide what to do if it is a GET or POST request.
 
@@ -167,3 +171,28 @@ Developed Code for the Lambda Function where I create the Boto3 client and use a
 Created a test event that mimicks the JSON that I want the output to display
 
 <img src="https://user-images.githubusercontent.com/74563990/161140169-f8ef12cc-0c61-430b-91ca-c2dd8b8246b6.png" width="600"/>
+
+## Python Script To Send Data
+Created a python script which uses a for loop to iterate through my "TestSample" (which includes the first 10 lines of my csv file)
+
+TestSample:
+
+<img src="https://user-images.githubusercontent.com/74563990/161142153-e7b2f0c6-205d-44e5-9922-0c1ab2fcaeea.png" width="600"/>
+
+Python Script:
+
+<img src="https://user-images.githubusercontent.com/74563990/161141954-7acd3621-ddd5-4c78-9436-743dd21c704b.png" width="600"/>
+
+## Testing the Pipeline
+After running the Python Script, you can assume from the Response 200's that the data was sent into Kinesis as a JSON
+
+<img src="https://user-images.githubusercontent.com/74563990/161142673-e50edc8c-0f13-4fd3-b7b0-6791d9e5c214.png" width="600"/>
+
+But I wanted to make sure, so I checked the log in CloudWatch & Kinesis activity graph:
+
+CloudWatch:
+<img src="https://user-images.githubusercontent.com/74563990/161143420-6d77ba90-0488-495b-af12-f4c7d2071c32.png" width="600"/>
+
+Kinesis Activity Graph:
+<img src="https://user-images.githubusercontent.com/74563990/161143732-d1baad15-24c6-448d-b002-26c763efe5e5.png" width="600"/>
+
