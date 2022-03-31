@@ -208,9 +208,11 @@ Created an S3 bucket named e-comm bucket
 <img src="https://user-images.githubusercontent.com/74563990/161152740-9c76804a-3e54-4181-a027-40fbd29af0c6.png" width="600"/>
 
 ## Testing the Pipeline
-Created a new test event called myS3TestEvent to test my code.
+Created a new test event called myS3TestEvent to test my code. Test result should return: "Hello, this is a test 123."
 
 <img src="https://user-images.githubusercontent.com/74563990/161152988-b4a9ddf3-f1e9-411a-8abe-539ddc25b289.png" width="600"/>
 
+<img src="https://user-images.githubusercontent.com/74563990/161154392-9b16feaa-3406-4a86-be35-305570db2341.png" width="600"/>
 
+<img src="https://user-images.githubusercontent.com/74563990/161157086-6bab36cc-e953-4079-8f99-2ae47aa61c3f.png" width="600"/>
 
