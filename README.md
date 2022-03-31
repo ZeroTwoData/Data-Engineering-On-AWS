@@ -136,15 +136,20 @@ A bulk of files will be stored in S3 and a Lambda function will take the data an
 
 ## Creating Lambda Functions
 I created 3 Lamda functions using AWS Lamda. Those three are:
-* Read-Write-To-Kinesis
+* Read-Write-To-Kinesis (USING THIS FUNCTION ONLY FOR INGESTION PIPELINE)
 * Write-To-S3
 * Read-Write-To-DynamoDB
 
-<img src="https://user-images.githubusercontent.com/74563990/160945962-bae5882c-b1af-4c8a-8f46-47a4652fb766.png" width="600"/>
+<img src="https://user-images.githubusercontent.com/74563990/161111353-ea1cbd77-35e5-49cb-9b5a-a0068e12afea.png" width="600"/>
 
-## Established Roles For Functions
+## Established IAM Roles For Function
 Read-Write-To-Kinesis Roles:
 * FULL ACESS Read Functions
 * Write Functions
 <img src="https://user-images.githubusercontent.com/74563990/161111128-5c76e629-f2b8-4f74-a9a1-cb2781949201.png" width="600"/>
+
 ## Creating API Gateway
+Created an API named "E-commerce", created a resource named e-commerce, and two HTTP methods GET (to read the data for DynamoDB table later) & POST (to write the data to Kinesis)
+<img src="https://user-images.githubusercontent.com/74563990/161112549-07254b3a-4a45-4046-82dd-5c6409c992dc.png" width="600"/>
+
+
