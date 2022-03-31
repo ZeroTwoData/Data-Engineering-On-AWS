@@ -98,7 +98,7 @@ For visualization purposes I will be using the business intelligence tool Tablea
 
 <br />
 
-# Data Pipelines
+# Data Pipelines (Concepts)
 
 ## Data Ingestion Pipeline
 The Python Client is going to send csv rows as JSON into the API Gateway. The Lamda function will process the JSON file and send it into Kinesis.
@@ -132,14 +132,19 @@ A bulk of files will be stored in S3 and a Lambda function will take the data an
 <img src="https://user-images.githubusercontent.com/74563990/160494091-ac1fa5d1-2c85-4fae-9b5e-365fb7543903.png" width="600"/>
 
 
-# Building
+# Building Data Ingestion Pipeline
 
 ## Creating Lambda Functions
 I created 3 Lamda functions using AWS Lamda. Those three are:
-* Write-To-Kinesis
+* Read-Write-To-Kinesis
 * Write-To-S3
-* Write-To-DynamoDB
+* Read-Write-To-DynamoDB
 
 <img src="https://user-images.githubusercontent.com/74563990/160945962-bae5882c-b1af-4c8a-8f46-47a4652fb766.png" width="600"/>
 
+## Established Roles For Functions
+Read-Write-To-Kinesis Roles:
+* FULL ACESS Read Functions
+* Write Functions
+<img src="https://user-images.githubusercontent.com/74563990/161111128-5c76e629-f2b8-4f74-a9a1-cb2781949201.png" width="600"/>
 ## Creating API Gateway
