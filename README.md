@@ -36,7 +36,7 @@ A DS Blueprint will always consist of five phases:
   - [Visualization API Pipeline](#visualization-API-pipeline)
   - [Visualization Warehouse Pipeline](#visualization-warehouse-pipeline)
   - [Batch Processing Pipeline](#batch-processing-pipeline)
-- [Buidlding Ingestion Pipeline](#building-ingestion-pipeline)
+- [Buidlding Ingestion Data Pipeline](#building-data-ingestion-pipeline)
 - [Demo](#demo)
 - [Conclusion](#conclusion)
 - [Follow Me On](#follow-me-on)
