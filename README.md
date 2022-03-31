@@ -208,7 +208,9 @@ Created an S3 bucket named e-comm bucket
 <img src="https://user-images.githubusercontent.com/74563990/161152740-9c76804a-3e54-4181-a027-40fbd29af0c6.png" width="600"/>
 
 ## Testing the Pipeline
-Created a new test event called myS3TestEvent to test my code. Test result should return: "Hello, this is a test 123."
+Enabled Kinesis to trigger APIData. Created a new test event called myS3TestEvent to test my code. Test result should return: "Hello, this is a test 123."
+
+<img src="https://user-images.githubusercontent.com/74563990/161158444-de57a8c1-932a-4445-b6ef-16ee5f917402.png" width="600"/>
 
 <img src="https://user-images.githubusercontent.com/74563990/161152988-b4a9ddf3-f1e9-411a-8abe-539ddc25b289.png" width="600"/>
 
