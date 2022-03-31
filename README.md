@@ -173,7 +173,7 @@ Created a test event that mimicks the JSON that I want the output to display
 <img src="https://user-images.githubusercontent.com/74563990/161140169-f8ef12cc-0c61-430b-91ca-c2dd8b8246b6.png" width="600"/>
 
 ## Python Script To Send Data
-Created a python script which uses a for loop to iterate through my "TestSample" (which includes the first 10 lines of my csv file)
+Created a python script which uses a for loop to iterate through my "TestSample" (which includes the first 9 rows of my csv file)
 
 TestSample:
 
