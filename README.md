@@ -158,3 +158,12 @@ Read-Write-To-Kinesis Roles:
 Created an API named "E-commerce", created a resource (consists of a url, an HTTP method, a response type, a JSON Schema describing the input(s) to the API Resource, and a JSON Schema describing the output) named "e-commerce", and created two HTTP methods: GET (to read the data from DynamoDB table later) & POST (to write the data to Kinesis)
 
 <img src="https://user-images.githubusercontent.com/74563990/161112549-07254b3a-4a45-4046-82dd-5c6409c992dc.png" width="600"/>
+
+## Lamda Code
+Developed Code for the Lambda Function where I create the Boto3 client and use an if/elif/else decision structure to decide what to do if it is a GET or POST request.
+
+<img src="https://user-images.githubusercontent.com/74563990/161139810-2eda0049-8fea-4f96-b276-a207973186af.png" width="600"/>
+
+Created a test event that mimicks the JSON that I want the output to display
+
+<img src="https://user-images.githubusercontent.com/74563990/161140169-f8ef12cc-0c61-430b-91ca-c2dd8b8246b6.png" width="600"/>
