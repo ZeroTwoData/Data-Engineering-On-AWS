@@ -149,7 +149,8 @@ Read-Write-To-Kinesis Roles:
 <img src="https://user-images.githubusercontent.com/74563990/161111128-5c76e629-f2b8-4f74-a9a1-cb2781949201.png" width="600"/>
 
 ## Creating API Gateway
-Created an API named "E-commerce", created a resource named e-commerce, and two HTTP methods GET (to read the data for DynamoDB table later) & POST (to write the data to Kinesis)
+Created an API named "E-commerce", created a resource (consists of a url, an HTTP method, a response type, a JSON Schema describing the input(s) to the API Resource, and a JSON Schema describing the output) named e-commerce, and two HTTP methods: GET (to read the data from DynamoDB table later) & POST (to write the data to Kinesis)
+
 <img src="https://user-images.githubusercontent.com/74563990/161112549-07254b3a-4a45-4046-82dd-5c6409c992dc.png" width="600"/>
 
 
