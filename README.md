@@ -190,9 +190,7 @@ After running the Python Script, you can assume from the Response 200's that the
 
 But I wanted to make sure, so I checked the log in CloudWatch & Kinesis activity graph:
 
-CloudWatch:
 <img src="https://user-images.githubusercontent.com/74563990/161143420-6d77ba90-0488-495b-af12-f4c7d2071c32.png" width="600"/>
 
-Kinesis Activity Graph:
 <img src="https://user-images.githubusercontent.com/74563990/161143732-d1baad15-24c6-448d-b002-26c763efe5e5.png" width="600"/>
 
