@@ -150,7 +150,7 @@ Created a Kinesis Stream to take in my data named APIData
 
 ## Established IAM Roles For Function
 Read-Write-To-Kinesis Roles:
-* FULL ACESS Read Functions
+* FULL ACCESS Read Functions to Kinesis
 * Write Functions: PutRecord (write one request), PutRecords (write multiple request); Allowed writing access to APIData Kinesis Stream
 <img src="https://user-images.githubusercontent.com/74563990/161111128-5c76e629-f2b8-4f74-a9a1-cb2781949201.png" width="600"/>
 
@@ -198,3 +198,19 @@ But I wanted to make sure, so I checked the log in CloudWatch & Kinesis activity
 
 ## Setup S3 bucket
 Created an S3 bucket named e-comm bucket
+
+## IAM Roles for Write-To-S3 Function
+* FULL ACCESS to S3
+* FULL ACCESS Read Functions to Kinesis
+
+## Create Lambda Code for S3 Insert
+
+<img src="https://user-images.githubusercontent.com/74563990/161152740-9c76804a-3e54-4181-a027-40fbd29af0c6.png" width="600"/>
+
+## Testing the Pipeline
+Created a new test event called myS3TestEvent to test my code.
+
+<img src="https://user-images.githubusercontent.com/74563990/161152988-b4a9ddf3-f1e9-411a-8abe-539ddc25b289.png" width="600"/>
+
+
+
