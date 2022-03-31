@@ -107,7 +107,7 @@ The Python Client is going to send csv rows as JSON into the API Gateway. The La
 <img src="https://user-images.githubusercontent.com/74563990/160485088-a7aeaa81-5bf1-4806-918d-e049332e72dd.png" width="600"/>
 
 ## Stream To Raw Storage Pipeline
-Data that is lying in the Kinesis stream will trigger another Lambda function, which takes the data and dumps it into a S3 bucket. 
+Data that is lying in the Kinesis stream will trigger another Lambda function, which takes the data and dumps it into a S3 bucket. The main use case for this is to put data into a data lake or another storage that can be used later. 
 *To prevent a lot of files from being dumped into the S3 bucket at one time, I configured the Lambda function to wait for a specified amount of time after each transaction. 
 
 <img src="https://user-images.githubusercontent.com/74563990/160485547-57b446d5-4fa6-4998-aca9-b06d5b88a6c1.png" width="600"/>
@@ -194,3 +194,7 @@ But I wanted to make sure, so I checked the log in CloudWatch & Kinesis activity
 
 <img src="https://user-images.githubusercontent.com/74563990/161143732-d1baad15-24c6-448d-b002-26c763efe5e5.png" width="600"/>
 
+# Stream To Raw Storage Pipeline
+
+## Setup S3 bucket
+Created an S3 bucket named e-comm bucket
