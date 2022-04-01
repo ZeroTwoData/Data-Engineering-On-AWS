@@ -5,7 +5,7 @@ This project was a means to test my data engineering knowledge through the plann
 
 ## What Is the Purpose of Data Engineering?
 
-Data Engineering is the process of making data usable for the business, by making it accessible for "data customers (BI Analysts, Data Analysts, Data Scientists, etc.)" who will ultimately analyze this data for business needs. Data customers are only able to access & analyze data, after a data engineer has built a system in which they can retrieve the data from. These systems, specifically referred to as "data pipelines," are an end-to-end process that ingest raw(unorganized)/organized data, process it, prepare it, store it, and finally visualize the data for the customers to use. I found that the best way to begin designing pipelines, is to begin by creating a blueprint. Below is a blueprint for which data pipelines can be built upon.
+Data Engineering is the process of making data usable for the business, by making it accessible for "data customers," such as BI Analysts, Data Analysts, Data Scientists, etc., who will ultimately analyze this data for business needs. Data customers are only able to access & analyze data, after a data engineer has built a system in which they can retrieve the data from. These systems, specifically referred to as "data pipelines," are an end-to-end process that ingest raw(unorganized)/organized data, process it, prepare it, store it, and finally visualize the data for the customers to use. I found that the best way to begin designing pipelines, is to begin by creating a blueprint. Below is a blueprint for which data pipelines can be built upon.
 
 ![DS Blueprint](https://user-images.githubusercontent.com/74563990/159792405-7195ed58-7244-44a3-8b55-9719ba720d25.jpg)
 
@@ -145,10 +145,10 @@ A bulk of files will be stored in S3 and a Lambda function will take the data an
 ## Creating Lambda Functions
 I created 3 Lamda functions using AWS Lamda. Those three are:
 * Read-Write-To-Kinesis (USING THIS FUNCTION ONLY FOR INGESTION PIPELINE)
-* Write-To-S3
-* Read-Write-To-DynamoDB
+* Write-Kinesis-To-S3
+* Write-To-DynamoDB
 
-<img src="https://user-images.githubusercontent.com/74563990/161111353-ea1cbd77-35e5-49cb-9b5a-a0068e12afea.png" width="600"/>
+<img src="https://user-images.githubusercontent.com/74563990/161352691-f8c0d2f6-9a17-42a8-ac45-0c0897f2f76c.png" width="600"/>
 
 ## Setting Up Kinesis
 Created a Kinesis Stream to take in my data named APIData
