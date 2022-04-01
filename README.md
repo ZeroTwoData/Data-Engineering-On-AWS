@@ -1,7 +1,7 @@
 # E-Commerce Data Engineering Project Using AWS
 
-# Introduction
-This project was a means to test my data engineering knowledge through the planning & construction of data pipelines, using one the most popular webservices known as "AWS." If you have no clue what I'm talking about 😂, then your in luck! This Github repo was specifically designed to explain exactly what data engineering is and it's purpose in the real world to readers with little technical knowledge.😉
+# Introduction & Goals
+This project was a means to test my data engineering knowledge through the planning & construction of data pipelines, with e-commerce data, using one the most popular webservices known as "AWS." If you have no clue what I'm talking about 😂, then your in luck! This Github repo was specifically designed to explain exactly what data engineering is and it's purpose in the real world to readers with little technical knowledge.😉
 
 ## What Is the Purpose of Data Engineering?
 
@@ -29,7 +29,7 @@ A DS Blueprint will always consist of five phases:
   - [Processing](#processing)
   - [Storage](#storage)
   - [Visualization](#visualization)
-- [Data Pipelines (Concepts)](#data-pipelines-(concepts))
+- [Data Pipelines (Conceptual Planning)](#data-pipelines-(concepts))
   - [Data Ingestion Pipeline](#data-ingestion-pipeline)
   - [Stream To Raw Storage Pipeline](#stream-to-raw-storage-pipeline)
   - [Stream To DynamoDB Pipeline](#stream-to-dynamodb-pipeline)
@@ -37,6 +37,11 @@ A DS Blueprint will always consist of five phases:
   - [Visualization Warehouse Pipeline](#visualization-warehouse-pipeline)
   - [Batch Processing Pipeline](#batch-processing-pipeline)
 - [Buidlding Ingestion Data Pipeline](#building-data-ingestion-pipeline)
+- [Buidlding Stream To Raw Storage Pipeline](#building-data-ingestion-pipeline)
+- [Buidlding Stream To DynamoDB Pipeline](#building-stream-to-dynamodb-pipeline)
+- [Buidlding Visualization API Pipeline](#building-visualization-api-pipeline)
+- [Buidlding Visualization Warehouse Pipeline](#building-visualization-warehouse-pipeline)
+- [Buidlding Batch Processing Pipeline](#building-batch-processing-pipeline)
 - [Demo](#demo)
 - [Conclusion](#conclusion)
 - [Follow Me On](#follow-me-on)
