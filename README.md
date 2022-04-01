@@ -53,7 +53,7 @@ Dataset Link: https://www.kaggle.com/carrie1/ecommerce-data
 Before building a pipeline it is essential to understand what the business requires it for. Will the visualized date be used for business goals or business intelligence goals. Business goals can include processsing transactions from various stores in a single location or give customers access to his/her purchase history. Business intelligence goals can include obtaining data such as average sales, most sold products, and most valuable products per hour/day/month/year. Understanding what results you want you from the data is key to developing the optimal data pipeline.
 
 ## Storage Possibilities
-The data can either be stored in a relational database or a NoSQL database. If we wanted to create relationships between the columns of data and that data is already strucutred, then it would make sense to use a relational database. Although if there are plans to scale (adding hundreds or thousands of columns to the dataset), then it would make more sense to develop a NoSQL database, so as to avoid the relational database from becoming too complex to understand. Although it would be optimal to design a relational database for this particular dataset, I plan to develop a NoSQL database for my dataset. I will ultimately create two tables. One table for Customer Purchase Overview (primary key ould be the CustomerID; each column would hold a different InvoiceNO; each row would hold amount & date information) and another for Invoice Details (primary key would be the InvoiceNo; each column would hold a different Stock Code; each row would include Description, Quantity, & Unit Price). Creating a NoSQL database will prepare myself for having to develop databases at scale in the future.
+The data can either be stored in a relational database or a NoSQL database. If we wanted to create relationships between the columns of data and that data is already strucutred, then it would make sense to use a relational database. Although if there are plans to scale (adding hundreds or thousands of columns to the dataset), then it would make more sense to develop a NoSQL database, so as to avoid the relational database from becoming too complex to understand. Although it would be optimal to design a relational database for this particular dataset, I plan to develop a NoSQL database for my dataset. I will ultimately create two tables. One table for Customer Purchase Overview (primary key would be the CustomerID; each column would hold a different InvoiceNO; each row would hold an amount & date) and another for Invoice Details (primary key would be the InvoiceNo; each column would hold a different Stock Code; each row would include Description, Quantity, & Unit Price). Creating a NoSQL database will prepare myself for having to develop databases at scale in the future.
 
 <img src="https://user-images.githubusercontent.com/74563990/161163691-c65f0d7d-48d0-4a70-992f-2de6086070e0.png" width="600"/>
 
@@ -223,5 +223,15 @@ Enabled Kinesis to trigger APIData. Created a new test event called myS3TestEven
 # Stream To DynamoDB Pipeline
 
 ## Setup DynamoDB
+Created a Customers table with CustomerID & Invoices table with InvoiceID.
+
+<img src="https://user-images.githubusercontent.com/74563990/161165552-847a741d-ba82-414b-969f-1c4ee4d72c06.png" width="600"/>
+
+## Setup IAM For DynamoDB Stream
+*Update Item - new data is added to the end of the table and not replacing other data
+
+<img src="https://user-images.githubusercontent.com/74563990/161165691-5b8dccc1-b706-4aa0-b59a-2778bb6e35f9.png" width="600"/>
+
+## Creating DynamoDB Lambda
 
 
