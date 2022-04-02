@@ -75,7 +75,7 @@ In this section, we will look at the main components of our data pipeline, which
 <img src="https://user-images.githubusercontent.com/74563990/159989202-57605a99-9fe8-4e85-9958-135a6cd5604d.jpg" width="300"/>
 
 ## Client
-Usually this doesn't need to be created because there would a system or device (a.k.a the client) that is going to send data to the API at a company. But in my case, since there isn't a device that can accomplish that task, I have created a Python Client using AWS SDK (a.k.a Boto3) that takes the csv and it selects data either on a row basis, basis of number of lines, or date that is going to be sent to my API. The Python Client will also transform each of my rows into a JSON string before sending, becuase JSON is more of an organized format to analyze the data.
+Usually this doesn't need to be created because there would a system or device (a.k.a the client) that is going to send data to the API at a company. But in my case, since there isn't a device that can accomplish that task, I have created a Python Client using AWS SDK (Boto3) that takes the csv and it selects data either on a row basis, basis of number of lines, or date that is going to be sent to my API. The Python Client will also transform each of my rows into a JSON string before sending, becuase JSON is more of an organized format to analyze the data.
 
 ## Connect
 My client is sending data to the API Gateway that is hosting a URL. Once the data is sent there, living in the background is a Lambda function that is getting triggered by the API Gateway and is processing the JSON that we have. Ultimately the Lambda function will send it into some system, such as a database or database buffer. In my case the data will be sent to a database buffer first.
@@ -228,7 +228,7 @@ Enabled Kinesis to trigger APIData. Created a new test event called myS3TestEven
 # Stream To DynamoDB Pipeline
 
 ## Setup DynamoDB
-Created a Customers table with CustomerID & Invoices table with InvoiceID.
+Created a Customers table with CustomerID & Invoices table with InvoiceID. I set to recieve one row at a time
 
 <img src="https://user-images.githubusercontent.com/74563990/161165552-847a741d-ba82-414b-969f-1c4ee4d72c06.png" width="600"/>
 
@@ -238,5 +238,10 @@ Created a Customers table with CustomerID & Invoices table with InvoiceID.
 <img src="https://user-images.githubusercontent.com/74563990/161165691-5b8dccc1-b706-4aa0-b59a-2778bb6e35f9.png" width="600"/>
 
 ## Creating DynamoDB Lambda
+Created DynamoDB Lambda code. Then I run the same Python Script to get data into DynamoDB
+
+Customers Table:
+<img src="https://user-images.githubusercontent.com/74563990/161357580-602a0be3-40b6-423c-a99a-dee2e06eaa77.png" width="600"/>
+
 
 
