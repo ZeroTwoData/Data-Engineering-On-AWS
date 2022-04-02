@@ -1,7 +1,7 @@
 # E-Commerce Data Engineering Project Using AWS
 
 # Introduction & Goals
-This project was a means to test my data engineering knowledge through the planning & construction of data pipelines, with e-commerce data, using one the most popular webservices known as "AWS." If you have no clue what I'm talking about 😂, then your in luck! This Github repo was specifically designed to explain exactly what data engineering is and it's purpose in the real world to readers with little technical knowledge.😉
+This project was a means to test my data engineering knowledge through the planning & construction of data pipelines, utilizing e-commerce data, with one the most popular webservices: Amazon Webservices (AWS). If you have no clue what I'm talking about 😂, then your in luck! This Github repo was specifically designed to explain exactly what data engineering is and it's purpose in the real world to readers with little technical knowledge.😉
 
 ## What Is the Purpose of Data Engineering?
 
