@@ -248,14 +248,20 @@ Customers Table:
 <img src="https://user-images.githubusercontent.com/74563990/161400220-6137e625-6090-47d0-88df-e1ecd5aa7be4.png" width="600"/>
 
 Invoices Table:
-<img src="https://user-images.githubusercontent.com/74563990/161400188-349b339a-9b43-4921-9756-dc9c2fb59eea.png" width="600"/>
+<img src="https://user-images.githubusercontent.com/74563990/161404185-c8ee48df-c706-4dba-a094-a5dd52394a36.png" width="600"/>
 
 ## Building Visualization API Pipeline
 
 # Creating API & Lambda For Access
 The Read-Write-To-Kinesis Lambda function also has a GET request method implemented, where the client requests the items for the InvoiceNo to get the description in the table.
+
 <img src="https://user-images.githubusercontent.com/74563990/161403800-ec5c4317-b048-4148-91c0-a722d13e7b25.png" width="600"/>
 
 # Tested API
 I tested the API with Postman but can also use AWS querystring to quickly test the API. The format is not great but the Stock Codes are displayed within the Description.
+
 <img src="https://user-images.githubusercontent.com/74563990/161403763-42efd3a1-b6a0-49f3-bb0b-f61532546523.png" width="600"/>
+
+## Building Visualization Redhsift Datawarehouse Pipeline
+
+
