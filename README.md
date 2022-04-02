@@ -233,7 +233,7 @@ Created a Customers table with CustomerID & Invoices table with InvoiceID. I set
 <img src="https://user-images.githubusercontent.com/74563990/161165552-847a741d-ba82-414b-969f-1c4ee4d72c06.png" width="600"/>
 
 ## Setup IAM For DynamoDB Stream
-*Update Item - new data is added to the end of the table and not replacing other data
+*Update Item - new data is added to the end of the table and not replacing other data*
 
 <img src="https://user-images.githubusercontent.com/74563990/161165691-5b8dccc1-b706-4aa0-b59a-2778bb6e35f9.png" width="600"/>
 
@@ -245,11 +245,17 @@ Python Script:
 <img src="https://user-images.githubusercontent.com/74563990/161390624-b4603baf-60db-4722-8ad0-77aba56371db.png" width="600"/>
 
 Customers Table:
-<img src="https://user-images.githubusercontent.com/74563990/161357580-602a0be3-40b6-423c-a99a-dee2e06eaa77.png" width="600"/>
+<img src="https://user-images.githubusercontent.com/74563990/161400220-6137e625-6090-47d0-88df-e1ecd5aa7be4.png" width="600"/>
 
 Invoices Table:
-<img src="https://user-images.githubusercontent.com/74563990/161390365-cbc1f272-886b-4568-b5bf-e5bc55c3cc14.png" width="600"/>
+<img src="https://user-images.githubusercontent.com/74563990/161400188-349b339a-9b43-4921-9756-dc9c2fb59eea.png" width="600"/>
 
 ## Building Visualization API Pipeline
 
 # Creating API & Lambda For Access
+The Read-Write-To-Kinesis Lambda function also has a GET request method implemented, where the client requests the items for the InvoiceNo to get the description in the table.
+<img src="https://user-images.githubusercontent.com/74563990/161403800-ec5c4317-b048-4148-91c0-a722d13e7b25.png" width="600"/>
+
+# Tested API
+I tested the API with Postman but can also use AWS querystring to quickly test the API
+<img src="https://user-images.githubusercontent.com/74563990/161403763-42efd3a1-b6a0-49f3-bb0b-f61532546523.png" width="600"/>
