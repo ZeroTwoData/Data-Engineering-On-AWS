@@ -238,7 +238,8 @@ Created a Customers table with CustomerID & Invoices table with InvoiceID. I set
 <img src="https://user-images.githubusercontent.com/74563990/161165691-5b8dccc1-b706-4aa0-b59a-2778bb6e35f9.png" width="600"/>
 
 ## Creating DynamoDB Lambda
-Created DynamoDB Lambda code. Then I run the same Python Script again to get data into DynamoDB
+Created Write-To-DynamoDB Lambda code. Then I run the same Python Script again to get data into DynamoDB
+<img src="https://user-images.githubusercontent.com/74563990/161390781-c27406cc-b8b5-47f3-bd75-df5302ace148.png" width="600"/>
 
 Python Script:
 <img src="https://user-images.githubusercontent.com/74563990/161390624-b4603baf-60db-4722-8ad0-77aba56371db.png" width="600"/>
