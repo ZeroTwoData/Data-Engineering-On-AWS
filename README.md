@@ -201,7 +201,7 @@ But I wanted to make sure, so I checked the log in CloudWatch & Kinesis activity
 
 <img src="https://user-images.githubusercontent.com/74563990/161143732-d1baad15-24c6-448d-b002-26c763efe5e5.png" width="600"/>
 
-# Stream To Raw Storage Pipeline
+# Building Stream To Raw Storage Pipeline
 
 ## Setup S3 bucket
 Created an S3 bucket named e-comm bucket
@@ -225,7 +225,7 @@ Enabled Kinesis to trigger APIData. Created a new test event called myS3TestEven
 
 <img src="https://user-images.githubusercontent.com/74563990/161157086-6bab36cc-e953-4079-8f99-2ae47aa61c3f.png" width="600"/>
 
-# Stream To DynamoDB Pipeline
+# Building Stream To DynamoDB Pipeline
 
 ## Setup DynamoDB
 Created a Customers table with CustomerID & Invoices table with InvoiceID. I set to recieve one row at a time
@@ -250,3 +250,6 @@ Customers Table:
 Invoices Table:
 <img src="https://user-images.githubusercontent.com/74563990/161390365-cbc1f272-886b-4568-b5bf-e5bc55c3cc14.png" width="600"/>
 
+## Building Visualization API Pipeline
+
+# Creating API & Lambda For Access
