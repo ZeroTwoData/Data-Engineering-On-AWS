@@ -262,6 +262,10 @@ I tested the API with Postman but can also use AWS querystring to quickly test t
 
 <img src="https://user-images.githubusercontent.com/74563990/161403763-42efd3a1-b6a0-49f3-bb0b-f61532546523.png" width="600"/>
 
-## Building Visualization Redhsift Datawarehouse Pipeline
+## Building Visualization Datawarehouse Pipeline
 
+## Create Redshift Datawarehouse
+I created a cluster in Redshift called "redshift-cluster-1"
+
+## Security Group for Firehose
 
