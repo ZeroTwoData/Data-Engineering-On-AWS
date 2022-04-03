@@ -239,30 +239,34 @@ Created a Customers table with CustomerID & Invoices table with InvoiceID. I set
 
 ## Creating DynamoDB Lambda
 Created Write-To-DynamoDB Lambda code. Then I run the same Python Script again to get data into DynamoDB
+
 <img src="https://user-images.githubusercontent.com/74563990/161390781-c27406cc-b8b5-47f3-bd75-df5302ace148.png" width="600"/>
 
 Python Script:
+
 <img src="https://user-images.githubusercontent.com/74563990/161390624-b4603baf-60db-4722-8ad0-77aba56371db.png" width="600"/>
 
 Customers Table:
+
 <img src="https://user-images.githubusercontent.com/74563990/161400220-6137e625-6090-47d0-88df-e1ecd5aa7be4.png" width="600"/>
 
 Invoices Table:
+
 <img src="https://user-images.githubusercontent.com/74563990/161404185-c8ee48df-c706-4dba-a094-a5dd52394a36.png" width="600"/>
 
-## Building Visualization API Pipeline
+# Building Visualization API Pipeline
 
-# Creating API & Lambda For Access
+## Creating API & Lambda For Access
 The Read-Write-To-Kinesis Lambda function also has a GET request method implemented, where the client requests the items for the InvoiceNo to get the description in the table.
 
 <img src="https://user-images.githubusercontent.com/74563990/161403800-ec5c4317-b048-4148-91c0-a722d13e7b25.png" width="600"/>
 
-# Tested API
+## Tested API
 I tested the API with Postman but can also use AWS querystring to quickly test the API. The format is not great but the Stock Codes are displayed within the Description.
 
 <img src="https://user-images.githubusercontent.com/74563990/161403763-42efd3a1-b6a0-49f3-bb0b-f61532546523.png" width="600"/>
 
-## Building Visualization Datawarehouse Pipeline
+# Building Visualization Datawarehouse Pipeline
 
 ## Create Redshift Datawarehouse
 I created a cluster in Redshift called "redshift-cluster-1"
