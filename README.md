@@ -42,7 +42,6 @@ A DS Blueprint will always consist of five phases:
 - [Buidlding Visualization API Pipeline](#building-visualization-api-pipeline)
 - [Buidlding Visualization Warehouse Pipeline](#building-visualization-warehouse-pipeline)
 - [Buidlding Batch Processing Pipeline](#building-batch-processing-pipeline)
-- [Demo](#demo)
 - [Conclusion](#conclusion)
 - [Follow Me On](#follow-me-on)
 
@@ -273,3 +272,10 @@ I created a cluster in Redshift called "redshift-cluster-1"
 
 ## Security Group for Firehose
 
+# Building Batch Processing Pipeline
+
+# Conclusion
+
+# Follow Me On
+
+*LinkedIn:* https://www.linkedin.com/in/ralph-worley-6a8944213/
