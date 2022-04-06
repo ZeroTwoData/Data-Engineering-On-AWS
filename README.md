@@ -14,10 +14,10 @@ Data Engineering is the process of making data usable for the business, by makin
 
 A DS Blueprint will always consist of five phases: 
 * Connect: Databases, Datawarehouses, Web Apps, API's, or other sources that hold the data, are connected  data engineers can easily connect to these sources to ingest it for their pipelines 
-* Buffer: 
-* Processing:
-* Store:
-* Visualize:
+* Buffer: a temporary holding area for data while it's waiting to be transferred to another location; developed in order to prevent data congestion from an incoming to an outgoing port of transfer
+* Processing: collecting raw data and translating it into usable information; batch processing & real-time processing are two core processing methods
+* Store: the location (database, datawarehouse, etc.) where the raw data will be held and the location of where the processed data will be held
+* Visualize: the representation of data through use of common graphics, such as charts, plots, infographics, and even animations
 
 
 # Contents
@@ -232,7 +232,7 @@ Created a Customers table with CustomerID & Invoices table with InvoiceID. I set
 <img src="https://user-images.githubusercontent.com/74563990/161165552-847a741d-ba82-414b-969f-1c4ee4d72c06.png" width="600"/>
 
 ## Setup IAM For DynamoDB Stream
-*Update Item - new data is added to the end of the table and not replacing other data*
+What is update item? - *Update Item: new data is added to the end of the table and not replacing other data*
 
 <img src="https://user-images.githubusercontent.com/74563990/161165691-5b8dccc1-b706-4aa0-b59a-2778bb6e35f9.png" width="600"/>
 
@@ -268,9 +268,17 @@ I tested the API with Postman but can also use AWS querystring to quickly test t
 # Building Visualization Datawarehouse Pipeline
 
 ## Create Redshift Datawarehouse
-I created a cluster in Redshift called "redshift-cluster-1"
+I created a cluster in Redshift called "redshift-firehose" which will recieve data from Kinesis firehose
+
+## Setup IAM for Redshift
+I attached the AmazonRedshiftAllCommandsFullAccess defualt policy. This policy includes permissions to run SQL commands to COPY, UNLOAD, and query data with Amazon Redshift. The policy also grants permissions to run SELECT statements for related services, such as Amazon S3, Amazon CloudWatch logs, Amazon SageMaker, and AWS Glue.
 
 ## Security Group for Firehose
+This step is important to make sure that Firehose can actually send data into Redshift (becuase Redshift is in its on Virtual Private Cloud). To make sure I went to EC2 -> Security Groups -> clicked on the only security group that was listed. Then I clicked on "inbound rules" to make sure that all traffic was allowed (this means that all types of internet data can sent through)
+
+<img src="https://user-images.githubusercontent.com/74563990/161990710-e9f648ec-4226-4780-8596-403556f08d40.png" width="600"/>
+
+<img src="https://user-images.githubusercontent.com/74563990/161990539-822bf182-95b2-45bd-8849-913d84fa3fcb.png" width="600"/>
 
 # Building Batch Processing Pipeline
 
