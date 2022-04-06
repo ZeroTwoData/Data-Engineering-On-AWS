@@ -6,9 +6,8 @@ def lambda_handler(event, context):
     print("MyEvent:") #created a seperate line for this text to easily see the event in the next line on CloudWatch
     print(event) #the data that is coming in
 
-#    Syntax:
-#    mycontext = event.get("context")
-#    method = mycontext.get("http-method")
+#   mycontext = event.get("context")
+#   method = mycontext.get("http-method")
     method = event['context']['http-method']
 
     if method == "GET":
@@ -26,7 +25,7 @@ def lambda_handler(event, context):
         
         
 
-        #myreturn = "This is the return of the get"
+        #myreturn = "This is where the status code is returned for the GET requests"
 
         return {
             'statusCode': 200,
