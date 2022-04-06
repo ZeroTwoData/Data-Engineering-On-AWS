@@ -286,8 +286,16 @@ Created a table called "firehosetransactions" to hold the data
 <img src="https://user-images.githubusercontent.com/74563990/162001840-244dfbb9-f40c-4219-a368-42a908135abb.png" width="600"/>
 
 ## S3 & JSON Paths
+Created an S3 bucket named "firehoseredshift1" for temporary storage of my Kinesis Firehose Delivery Stream Data. I also added a file called "jsonpaths.json" to my bucket. This file is responsible for helping firehose to detect the objects (InvoiceNo, StockCode, etc.) within the string.
+
+<img src="https://user-images.githubusercontent.com/74563990/162041507-53e1083a-f4ff-440e-b260-0f94243f7484.png" width="600"/>
 
 ## Configure Firehose
+First I went to the Kinesis service and selected "Delivery Streams" on the left side of the screen. This allows
+
+<img src="https://user-images.githubusercontent.com/74563990/162045330-774e09ed-7c5e-402c-ab0b-cdbfc0550a7a.png" width="600"/>
+
+<img src="https://user-images.githubusercontent.com/74563990/162045336-898efccf-3c64-4367-91a0-2dee56faadc3.png" width="600"/>
 
 ## Debug Redshift Streaming
 
