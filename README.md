@@ -274,11 +274,24 @@ I created a cluster in Redshift called "redshift-firehose" which will recieve da
 I attached the AmazonRedshiftAllCommandsFullAccess defualt policy. This policy includes permissions to run SQL commands to COPY, UNLOAD, and query data with Amazon Redshift. The policy also grants permissions to run SELECT statements for related services, such as Amazon S3, Amazon CloudWatch logs, Amazon SageMaker, and AWS Glue.
 
 ## Security Group for Firehose
-This step is important to make sure that Firehose can actually send data into Redshift (becuase Redshift is in its on Virtual Private Cloud). To make sure I went to EC2 -> Security Groups -> clicked on the only security group that was listed. Then I clicked on "inbound rules" to make sure that all traffic was allowed (this means that all types of internet data can sent through) and the "Source" was set to the US-east-1 VPC number indicated in the image below (received an error message indicating that it was already set to US-east-1, so there was no need to type the VPC in the image). 
+This step is important to make sure that Firehose can actually send data into Redshift (becuase Redshift is in its on Virtual Private Cloud). To make sure I went to EC2 -> Security Groups -> clicked on the only security group that was listed. Then I clicked on "inbound rules" to make sure that all traffic was allowed (this means that all types of internet data can be sent through) and all ports were allowed. The "Source" was set to the US-east-1 VPC number indicated in the image below, because this is the service that I'm using. 
 
-<img src="https://user-images.githubusercontent.com/74563990/161990710-e9f648ec-4226-4780-8596-403556f08d40.png" width="600"/>
+<img src="https://user-images.githubusercontent.com/74563990/161995434-75bd9428-89ed-4e11-87e0-e7514ed90a70.png" width="600"/>
 
 <img src="https://user-images.githubusercontent.com/74563990/161990539-822bf182-95b2-45bd-8849-913d84fa3fcb.png" width="600"/>
+
+## Create Redshift Tables
+Created a table called "firehosetransactions" to hold the data
+
+<img src="https://user-images.githubusercontent.com/74563990/162001840-244dfbb9-f40c-4219-a368-42a908135abb.png" width="600"/>
+
+## S3 & JSON Paths
+
+## Configure Firehose
+
+## Debug Redshift Streaming
+
+## Tabluea
 
 # Building Batch Processing Pipeline
 
