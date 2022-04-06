@@ -13,11 +13,11 @@ Data Engineering is the process of making data usable for the business, by makin
 ## How Does The DS Blueprint Work
 
 A DS Blueprint will always consist of five phases: 
-* _Connect_: Databases, Datawarehouses, Web Apps, API's, or other sources that hold the data, are connected  data engineers can easily connect to these sources to ingest it for their pipelines 
-* _Buffer_: a temporary holding area for data while it's waiting to be transferred to another location; developed in order to prevent data congestion from an incoming to an outgoing port of transfer
-* _Processing_: collecting raw data and translating it into usable information; batch processing & real-time processing are two core processing methods
-* _Store_: the location (database, datawarehouse, etc.) where the raw data will be held and the location of where the processed data will be held
-* _Visualize_: the representation of data through use of common graphics, such as charts, plots, infographics, and even animations
+* __Connect__: Databases, Datawarehouses, Web Apps, API's, or other sources that hold the data, are connected  data engineers can easily connect to these sources to ingest it for their pipelines 
+* __Buffer__: a temporary holding area for data while it's waiting to be transferred to another location; developed in order to prevent data congestion from an incoming to an outgoing port of transfer
+* __Processing__: collecting raw data and translating it into usable information; batch processing & real-time processing are two core processing methods
+* __Store__: the location (database, datawarehouse, etc.) where the raw data will be held and the location of where the processed data will be held
+* __Visualize__: the representation of data through use of common graphics, such as charts, plots, infographics, and even animations
 
 
 # Contents
