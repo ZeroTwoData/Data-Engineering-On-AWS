@@ -265,7 +265,7 @@ I tested the API with Postman but can also use AWS querystring to quickly test t
 
 <img src="https://user-images.githubusercontent.com/74563990/161403763-42efd3a1-b6a0-49f3-bb0b-f61532546523.png" width="600"/>
 
-# Building Visualization Datawarehouse Pipeline
+# Building Visualization Warehouse Pipeline
 
 ## Create Redshift Datawarehouse
 I created a cluster in Redshift called "redshift-firehose" which will recieve data from Kinesis firehose
@@ -291,11 +291,16 @@ Created an S3 bucket named "firehoseredshift1" for temporary storage of my Kines
 <img src="https://user-images.githubusercontent.com/74563990/162041507-53e1083a-f4ff-440e-b260-0f94243f7484.png" width="600"/>
 
 ## Configure Firehose
-First I went to the Kinesis service and selected "Delivery Streams" on the left side of the screen. This allows
+First I went to the Kinesis service and selected "Delivery Streams" on the left side of the screen. This allows to access the Kinesis Firehose Delivery Stream service. Next, I click on "Create Delivery Stream" and I configure the settings below:
 
 <img src="https://user-images.githubusercontent.com/74563990/162045330-774e09ed-7c5e-402c-ab0b-cdbfc0550a7a.png" width="600"/>
 
 <img src="https://user-images.githubusercontent.com/74563990/162045336-898efccf-3c64-4367-91a0-2dee56faadc3.png" width="600"/>
+
+As you see above, I circled the important parts in the images that make up the delivery stream:
+Source: Kinesis Data Stream (APIData) --> Intermediate Storage: S3 (firehoseredshift1) --> Destination: Redshift (Database name: redshift-firehose; Table name: firehosetransactions)
+
+*The Copy Command (which copies my data from S3 into the table) which is created by default, is updated with an additional command in the OPTIONAL textbox in the image above. This command allows the json paths file to be read*
 
 ## Debug Redshift Streaming
 
